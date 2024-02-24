@@ -1,0 +1,31 @@
+﻿<Page x:Class="SaveLife.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SaveLife.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LoginPage">
+
+    <Grid Background="#575757">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="207.88"/>
+            <RowDefinition Height="Auto" MinHeight="45.24"/>
+            <RowDefinition Height="Auto" MinHeight="27.24"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="/Assets/glasses.png" HorizontalAlignment="Center" Margin="0,10,0,0" Width="50"/>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0,10,0,0" Text="Авторизация" TextAlignment="Center" Width="314" Foreground="White"/>
+
+        <StackPanel Grid.Row="2" Margin="50,10,50,10">
+            <TextBlock FontSize="16" Text="Имя" Width="200" Foreground="White"/>
+            <TextBox x:Name="UsernameNameBox" Margin="0,5,0,10" Width="200" MaxLength="20"/>
+            <TextBlock FontSize="16" Text="Фамилия" Width="200" Foreground="White"/>
+            <TextBox x:Name="UserSurnameBox" Margin="0,5,0,10" Width="200" MaxLength="20"/>
+            <Button x:Name="LoginButton" Content="Далее" Width="80" Height="30" HorizontalAlignment="Center" Click="LoginButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

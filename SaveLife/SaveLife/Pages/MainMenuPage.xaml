@@ -1,0 +1,34 @@
+﻿<Page x:Class="SaveLife.Pages.MainMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SaveLife.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainMenuPage">
+
+    <Grid Background="#575757">
+        <!-- Title TextBlock -->
+        <TextBlock Text="Main Menu" Foreground="White" FontWeight="Bold" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBlock Text="Welcome!" Foreground="White" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="354,46,352,0"/>
+
+        <!-- Grid for buttons -->
+        <Grid VerticalAlignment="Center" Height="362" Margin="0,78,0,9.6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*" />
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!-- Left Button -->
+            <Button Content="VIEW AGENTS" Foreground="White" Background="#77b4d5" FontSize="40" FontWeight="Bold" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,6,10,10.2"/>
+
+            <!-- Right Button -->
+            <Button Content="VIEW ORDERS" Foreground="White" Background="#77b4d5" FontSize="40" FontWeight="Bold" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,6,10,10.2"/>
+        </Grid>
+    </Grid>
+</Page>
