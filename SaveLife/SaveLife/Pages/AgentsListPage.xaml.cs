@@ -12,17 +12,50 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SaveLife.Models;
+using SaveLife.ManagerScipts;
 
 namespace SaveLife.Pages
 {
-    /// <summary>
-    /// Interaction logic for AgentsListPage.xaml
-    /// </summary>
+    
     public partial class AgentsListPage : Page
     {
+        private List<Agent> _availableAgents;
         public AgentsListPage()
         {
             InitializeComponent();
+
+            _availableAgents = SaveLifeDBEntities.GetContext().Agents.ToList();
+            DGAgents.ItemsSource = _availableAgents;
+        }
+
+        private void MainMenu_Click(object sender, RoutedEventArgs e)
+        {
+            PageNavigationManager.MainFrame.Navigate(new MainMenuPage());
+            PageNavigationManager.MainFrame.RemoveBackEntry();
+        }
+
+        private void EditAgent_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddAgent_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteAgent_Click(object sender, RoutedEventArgs e)
+        {
+            var agentsToRemove = DGAgents.SelectedItems.Cast<Agent>().ToList();
+            if (MessageBox.Show("Удалить агента?", "Подтвердите удаление", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                SaveLifeDBEntities.GetContext().Agents.RemoveRange(agentsToRemove);
+                SaveLifeDBEntities.GetContext().SaveChanges();
+                MessageBox.Show("Выбранные агенты удалены!");
+
+                DGAgents.ItemsSource = SaveLifeDBEntities.GetContext().Agents.ToList();
+            }
         }
     }
 }

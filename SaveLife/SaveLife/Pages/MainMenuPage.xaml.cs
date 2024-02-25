@@ -27,16 +27,17 @@ namespace SaveLife.Pages
             InitializeComponent();
         }
 
-        private void AgentsButton_Click(object sender, RoutedEventArgs e)
+        private void ordersButton_Click(object sender, RoutedEventArgs e)
+        {
+            PageNavigationManager.MainFrame.Navigate(new OrdersListPage());
+            PageNavigationManager.MainFrame.RemoveBackEntry();
+        }
+
+        private void agentButton_Click(object sender, RoutedEventArgs e)
         {
             PageNavigationManager.MainFrame.Navigate(new AgentsListPage());
             PageNavigationManager.MainFrame.RemoveBackEntry();
         }
 
-        private void OrdersButton_Click(object sender, RoutedEventArgs e)
-        {
-            PageNavigationManager.MainFrame.Navigate(new OrdersListPage());
-            PageNavigationManager.MainFrame.RemoveBackEntry();
-        }
     }
 }

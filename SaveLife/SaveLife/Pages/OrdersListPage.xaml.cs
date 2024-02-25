@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SaveLife.ManagerScipts;
+using SaveLife.Models;
 
 namespace SaveLife.Pages
 {
@@ -20,9 +22,19 @@ namespace SaveLife.Pages
     /// </summary>
     public partial class OrdersListPage : Page
     {
+        private List<SalesHistory> _availableSales;
         public OrdersListPage()
         {
             InitializeComponent();
+
+            _availableSales = SaveLifeDBEntities.GetContext().SalesHistories.ToList();
+            DGOrders.ItemsSource = _availableSales;
+        }
+
+        private void MainMenu_Click(object sender, RoutedEventArgs e)
+        {
+            PageNavigationManager.MainFrame.Navigate(new MainMenuPage());
+            PageNavigationManager.MainFrame.RemoveBackEntry();
         }
     }
 }

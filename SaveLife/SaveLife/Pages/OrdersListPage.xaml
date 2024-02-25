@@ -9,6 +9,24 @@
       Title="OrdersListPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"></RowDefinition>
+            <RowDefinition Height="73*"></RowDefinition>
+            <RowDefinition Height="0"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Fill="#77b4d5" Margin="0,0,0,323.6" Grid.RowSpan="2"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Height="49" Margin="0,18,0,17.8">
+            <Button Name="MainMenu" Content="&lt;" Margin="15,0,280,0" Height="50" Width="50" Background="#4a27ea" FontSize="30" FontWeight="Bold" BorderThickness="0" Padding="0,0,0,8" Foreground="White" Click="MainMenu_Click"></Button>
+            <TextBlock VerticalAlignment="Center" FontSize="30" FontWeight="Bold" Foreground="White"><Run Text="ЗАКАЗЫ"/></TextBlock>
+        </StackPanel>
+        <DataGrid Grid.Row="1" Name="DGOrders" AutoGenerateColumns="False" Width="auto" IsReadOnly="True" Margin="0,0.2,0,-0.4" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="SaleID" Binding="{Binding SaleID}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="AgentID" Binding="{Binding AgentID}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="ProductName" Binding="{Binding ProductName}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="SaleDate" Binding="{Binding SaleDate}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="SaleAmount" Binding="{Binding SaleAmount}" Width="*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

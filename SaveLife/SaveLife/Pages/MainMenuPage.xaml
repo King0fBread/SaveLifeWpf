@@ -9,11 +9,9 @@
       Title="MainMenuPage">
 
     <Grid Background="#575757">
-        <!-- Title TextBlock -->
         <TextBlock Text="Main Menu" Foreground="White" FontWeight="Bold" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <TextBlock Text="Welcome!" Foreground="White" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="354,46,352,0"/>
 
-        <!-- Grid for buttons -->
         <Grid VerticalAlignment="Center" Height="362" Margin="0,78,0,9.6">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -24,11 +22,9 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <!-- Left Button -->
-            <Button Content="VIEW AGENTS" Foreground="White" Background="#77b4d5" FontSize="40" FontWeight="Bold" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,6,10,10.2"/>
+            <Button Content="VIEW AGENTS" Name="agentButton" Foreground="White" Background="#77b4d5" FontSize="40" FontWeight="Bold" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,6,10,10.2" Click="agentButton_Click"/>
 
-            <!-- Right Button -->
-            <Button Content="VIEW ORDERS" Foreground="White" Background="#77b4d5" FontSize="40" FontWeight="Bold" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,6,10,10.2"/>
+            <Button Content="VIEW ORDERS" Name="ordersButton" Foreground="White" Background="#77b4d5" FontSize="40" FontWeight="Bold" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,6,10,10.2" Click="ordersButton_Click"/>
         </Grid>
     </Grid>
 </Page>
