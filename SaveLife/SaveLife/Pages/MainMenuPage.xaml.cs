@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using SaveLife.ManagerScipts;
+using SaveLife.Pages;
 
 namespace SaveLife.Pages
 {
@@ -23,6 +25,18 @@ namespace SaveLife.Pages
         public MainMenuPage()
         {
             InitializeComponent();
+        }
+
+        private void AgentsButton_Click(object sender, RoutedEventArgs e)
+        {
+            PageNavigationManager.MainFrame.Navigate(new AgentsListPage());
+            PageNavigationManager.MainFrame.RemoveBackEntry();
+        }
+
+        private void OrdersButton_Click(object sender, RoutedEventArgs e)
+        {
+            PageNavigationManager.MainFrame.Navigate(new OrdersListPage());
+            PageNavigationManager.MainFrame.RemoveBackEntry();
         }
     }
 }

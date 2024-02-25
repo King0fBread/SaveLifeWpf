@@ -15,6 +15,15 @@ namespace SaveLife.Models
     
     public partial class SaveLifeDBEntities : DbContext
     {
+        private static SaveLifeDBEntities _context;
+        public static SaveLifeDBEntities GetContext()
+        {
+            if(_context == null)
+            {
+                _context = new SaveLifeDBEntities();
+            }
+            return _context;
+        }
         public SaveLifeDBEntities()
             : base("name=SaveLifeDBEntities")
         {

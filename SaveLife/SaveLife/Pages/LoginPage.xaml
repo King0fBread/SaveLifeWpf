@@ -22,7 +22,7 @@
 
         <StackPanel Grid.Row="2" Margin="50,10,50,10">
             <TextBlock FontSize="16" Text="Имя" Width="200" Foreground="White"/>
-            <TextBox x:Name="UsernameNameBox" Margin="0,5,0,10" Width="200" MaxLength="20"/>
+            <TextBox x:Name="UserNameBox" Margin="0,5,0,10" Width="200" MaxLength="20"/>
             <TextBlock FontSize="16" Text="Фамилия" Width="200" Foreground="White"/>
             <TextBox x:Name="UserSurnameBox" Margin="0,5,0,10" Width="200" MaxLength="20"/>
             <Button x:Name="LoginButton" Content="Далее" Width="80" Height="30" HorizontalAlignment="Center" Click="LoginButton_Click"/>
