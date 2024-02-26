@@ -76,6 +76,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\AgentEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AgentsListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,6 +119,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SaveLife.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AgentEditPage.xaml.cs">
+      <DependentUpon>AgentEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AgentsListPage.xaml.cs">
       <DependentUpon>AgentsListPage.xaml</DependentUpon>

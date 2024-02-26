@@ -37,7 +37,10 @@ namespace SaveLife.Pages
 
         private void EditAgent_Click(object sender, RoutedEventArgs e)
         {
-
+            var button = sender as Button;
+            var selectedGame = button.DataContext as Agent;
+            PageNavigationManager.MainFrame.Navigate(new AgentEditPage(selectedGame));
+            PageNavigationManager.MainFrame.RemoveBackEntry();
         }
 
         private void AddAgent_Click(object sender, RoutedEventArgs e)
