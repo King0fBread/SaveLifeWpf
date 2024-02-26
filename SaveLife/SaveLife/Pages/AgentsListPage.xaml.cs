@@ -45,7 +45,8 @@ namespace SaveLife.Pages
 
         private void AddAgent_Click(object sender, RoutedEventArgs e)
         {
-
+            PageNavigationManager.MainFrame.Navigate(new AgentAddPage());
+            PageNavigationManager.MainFrame.RemoveBackEntry();
         }
 
         private void DeleteAgent_Click(object sender, RoutedEventArgs e)

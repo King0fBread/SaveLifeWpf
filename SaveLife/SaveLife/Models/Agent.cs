@@ -19,6 +19,14 @@ namespace SaveLife.Models
         {
             this.SalesHistories = new HashSet<SalesHistory>();
         }
+        public Agent(string firstName, string lastName, string email, string phone, string address)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.Phone = phone;
+            this.Address = address;
+        }
     
         public int AgentID { get; set; }
         public string FirstName { get; set; }
