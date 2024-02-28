@@ -49,9 +49,9 @@ namespace SaveLife.Pages
                     break;
             }
         }
-        private int AuthenticateUser(string firstName, string surname)
+        public static int AuthenticateUser(string firstName, string surname)
         {
-            var context = SaveLifeDBEntities.GetContext().Agents.FirstOrDefault(p => p.FirstName == UserNameBox.Text);
+            var context = SaveLifeDBEntities.GetContext().Agents.FirstOrDefault(p => p.FirstName == firstName);
 
             if(context != null)
             {
